@@ -19,4 +19,3 @@ jobs:
 
       - name: Print timestamp
         run: echo "Current UTC time: $(date -u +"%Y-%m-%d %H:%M")"
-        
