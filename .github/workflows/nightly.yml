@@ -1,0 +1,22 @@
+name: Nightly Build
+
+on:
+  schedule:
+    # ┌──────── min (0-59)
+    # │ ┌────── hour (0-23, UTC)
+    # │ │ ┌──── day-of-month (1-31)
+    # │ │ │ ┌── month (1-12)
+    # │ │ │ │ ┌─ day-of-week (0-6, Sunday = 0)
+    # │ │ │ │ │
+    - cron: '0 3 * * 1'   # 03:00 UTC every Monday
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Print timestamp
+        run: |
+          echo "Current UTC time: $(date -u '+%Y-%m-%d %H:%M')"
