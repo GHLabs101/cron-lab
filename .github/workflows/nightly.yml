@@ -9,6 +9,7 @@ on:
     # │ │ │ │ ┌─ day-of-week (0-6, Sunday = 0)
     # │ │ │ │ │
     - cron: '0 3 * * 1'   # 03:00 UTC every Monday
+  workflow_dispatch:
 
 jobs:
   build:
